@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy - UnnatiRupeeCredit</title>
+<style>
+  :root {
+    --primary: #9E2BCF;
+    --primary-dark: #7A1FA2;
+    --primary-light: #F7ECFC;
+    --text-dark: #1D1D1D;
+    --text-gray: #666666;
+    --text-light: #999999;
+    --bg: #FFFFFF;
+    --card: #FFFFFF;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    background: var(--bg);
+    color: var(--text-dark);
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 480px; margin: 0 auto; padding-bottom: 28px; }
+
+  /* Hero */
+  .hero {
+    background: linear-gradient(180deg, #7A1FA2 0%, #B565D4 100%);
+    padding: 36px 24px 32px;
+    color: #FFFFFF;
+  }
+  .hero .brand { font-size: 13px; font-weight: 600; opacity: 0.85; margin-bottom: 14px; letter-spacing: 1px; text-transform: uppercase; }
+  .hero h1 { font-size: 24px; font-weight: 700; letter-spacing: 0.2px; }
+  .hero p { margin-top: 10px; font-size: 14px; line-height: 1.6; opacity: 0.92; }
+  .hero .amount {
+    margin-top: 18px;
+    display: inline-block;
+    background: rgba(255,255,255,0.16);
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 999px;
+    padding: 8px 18px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  /* Section card */
+  .section {
+    background: #F7ECFC;
+    border-radius: 16px;
+    margin: 14px 16px 0;
+    padding: 20px 18px;
+  }
+  .section h2 {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section h2::before {
+    content: "";
+    width: 4px; height: 16px;
+    border-radius: 2px;
+    background: var(--primary);
+    display: inline-block;
+    flex: 0 0 auto;
+  }
+  .section h3 {
+    margin-top: 16px;
+    font-size: 14.5px;
+    font-weight: 700;
+    color: var(--text-dark);
+  }
+  .section p { margin-top: 10px; font-size: 14px; line-height: 1.7; color: var(--text-gray); }
+  .section p.small { font-size: 12.5px; line-height: 1.6; color: var(--text-light); }
+  .section a { color: var(--primary); text-decoration: none; word-break: break-all; }
+  .section ul { margin: 10px 0 0 18px; }
+  .section ul li { font-size: 13.5px; line-height: 1.7; color: var(--text-gray); margin-top: 4px; }
+  .section b, .section strong { color: var(--text-dark); }
+
+  /* Data source list */
+  .source-list { margin-top: 14px; display: flex; flex-direction: column; gap: 10px; }
+  .source-item {
+    display: flex; align-items: flex-start; gap: 10px;
+    background: var(--primary-light);
+    border-radius: 12px;
+    padding: 12px 14px;
+  }
+  .source-item .dot {
+    flex: 0 0 auto;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #FFF;
+    font-size: 12px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    margin-top: 1px;
+  }
+  .source-item .txt { min-width: 0; }
+  .source-item .txt b { display: block; font-size: 14px; color: var(--text-dark); }
+  .source-item .txt span { font-size: 12.5px; color: var(--text-gray); line-height: 1.55; display: block; margin-top: 3px; }
+  .source-item .txt span + span { margin-top: 6px; }
+  .optional-tag {
+    display: inline-block; margin-left: 6px;
+    font-size: 10px; font-weight: 700;
+    color: var(--primary);
+    background: #FFF;
+    border: 1px solid var(--primary);
+    border-radius: 999px;
+    padding: 1px 7px;
+    vertical-align: 1px;
+  }
+  /* Key facts grid */
+  .facts { margin-top: 14px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .fact {
+    background: var(--primary-light);
+    border-radius: 12px;
+    padding: 14px 12px;
+    text-align: center;
+  }
+  .fact b { display: block; font-size: 17px; color: var(--primary); font-weight: 700; }
+  .fact span { display: block; margin-top: 4px; font-size: 11.5px; color: var(--text-gray); line-height: 1.45; }
+
+  /* Promise / security */
+  .promise { margin-top: 12px; display: flex; flex-direction: column; gap: 10px; }
+  .promise-item { display: flex; gap: 10px; align-items: flex-start; }
+  .promise-item .check {
+    flex: 0 0 auto;
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #FFF;
+    font-size: 11px;
+    display: flex; align-items: center; justify-content: center;
+    margin-top: 2px;
+  }
+  .promise-item p { font-size: 13.5px; line-height: 1.65; color: var(--text-gray); margin-top: 0; }
+  .promise-item p b { color: var(--text-dark); }
+
+  /* Contact block */
+  .contact-card {
+    margin-top: 14px;
+    background: var(--primary-light);
+    border-radius: 12px;
+    padding: 14px;
+    text-align: center;
+  }
+  .contact-card b { display: block; font-size: 14px; color: var(--text-dark); }
+  .contact-card a { display: block; margin-top: 6px; font-size: 14px; font-weight: 700; }
+
+  /* Footer */
+  .footer {
+    margin: 22px 16px 0;
+    padding: 18px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--text-light);
+  }
+  .footer .brand { font-weight: 700; color: var(--text-gray); font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="brand">UnnatiRupeeCredit</div>
+    <h1>Privacy Policy</h1>
+    <p>This Privacy Policy explains what information the UnnatiRupeeCredit application collects, how it is used, and the choices and rights you have.</p>
+    <div class="amount">Effective as of 2026-10-19</div>
+  </div>
+
+  <!-- Intro -->
+  <div class="section">
+    <h2>Introduction</h2>
+    <p>This privacy policy applies to the UnnatiRupeeCredit app for mobile devices, together with any related services operated by Pixel Technology LLC (collectively, the "Application"). Pixel Technology LLC is hereby referred to as the "Service Provider".</p>
+    <p>By downloading, installing, or using the Application, you agree to the collection and use of information in accordance with this policy. If you do not agree, please do not use the Application.</p>
+  </div>
+
+  <!-- Information collection and use -->
+  <div class="section">
+    <h2>Information Collection and Use</h2>
+    <p>The Application collects information when you download and use it. This information may include information such as:</p>
+    <ul>
+      <li>Your device's Internet Protocol address</li>
+      <li>The pages of the Application that you visit, the time and date of your visit, the time spent on those pages</li>
+      <li>The time spent on the Application</li>
+      <li>The mobile operating system you use</li>
+    </ul>
+    <p>The Application is a credit service. Because of that, the information you provide and the technical information described below are used to verify your identity, assess your creditworthiness, prevent fraud, and operate your account.</p>
+  </div>
+
+  <!-- Information you provide -->
+  <div class="section">
+    <h2>Information You Provide</h2>
+    <p>The following information is entered by you, or captured with your permission, while you complete the application process:</p>
+    <div class="source-list">
+      <div class="source-item">
+        <div class="dot">1</div>
+        <div class="txt">
+          <b>Mobile number</b>
+          <span>Used to create and sign in to your account, and to send you one-time verification codes.</span>
+        </div>
+      </div>
+      <div class="source-item">
+        <div class="dot">2</div>
+        <div class="txt">
+          <b>Basic profile</b>
+          <span>Education, work type, years of working, occupation, job level, monthly income, residence type, marital status, number of children, and religion.</span>
+        </div>
+      </div>
+      <div class="source-item">
+        <div class="dot">3</div>
+        <div class="txt">
+          <b>Identity information</b>
+          <span>Your name, your PAN number, and a photo of your PAN card, taken with the camera or chosen from your gallery.</span>
+        </div>
+      </div>
+      <div class="source-item">
+        <div class="dot">4</div>
+        <div class="txt">
+          <b>Reference contacts<span class="optional-tag">Optional</span></b>
+          <span>The name and phone number of up to two contacts that you type in yourself. The Application does not read your phone's contact book, address book, or any other contact list stored on your device.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Device information -->
+  <div class="section">
+    <h2>Device &amp; Technical Information</h2>
+    <p>To support identity verification, risk assessment, and fraud prevention, the Application collects the following technical information from your device:</p>
+    <div class="source-list">
+      <div class="source-item">
+        <div class="dot">1</div>
+        <div class="txt">
+          <b>Device &amp; hardware details</b>
+          <span>Device model, brand, board and device name, Android version, API level, screen resolution, and physical screen size.</span>
+        </div>
+      </div>
+      <div class="source-item">
+        <div class="dot">2</div>
+        <div class="txt">
+          <b>Memory &amp; storage</b>
+          <span>Total and available RAM, and the total and free capacity of internal storage and any external (SD card) storage.</span>
+        </div>
+      </div>
+      <div class="source-item">
+        <div class="dot">3</div>
+        <div class="txt">
+          <b>Battery &amp; device state</b>
+          <span>Battery level and charging status (charging, USB, or AC).</span>
+        </div>
+      </div>
+      <div class="source-item">
+        <div class="dot">4</div>
+        <div class="txt">
+          <b>Network information</b>
+          <span>Connection type (Wi-Fi, 2G, 3G, 4G, 5G, or other), your Wi-Fi IP address, and the name of your mobile network operator.</span>
+        </div>
+      </div>
+      <div class="source-item">
+        <div class="dot">5</div>
+        <div class="txt">
+          <b>Identifiers</b>
+          <span>Android ID and your Google Advertising ID (GAID).</span>
+        </div>
+      </div>
+      <div class="source-item">
+        <div class="dot">6</div>
+        <div class="txt">
+          <b>Language, locale &amp; region</b>
+          <span>Your device language, locale, and country settings.</span>
+        </div>
+      </div>
+      <div class="source-item">
+        <div class="dot">7</div>
+        <div class="txt">
+          <b>Approximate location</b>
+          <span>Coarse (network-based) location — latitude and longitude. See the "Location Information" section below.</span>
+        </div>
+      </div>
+      <div class="source-item">
+        <div class="dot">8</div>
+        <div class="txt">
+          <b>Installed applications</b>
+          <span>The list of applications installed on your device: app name, package name, version, install and last-update time, and whether the app is a system app. This list is used for risk assessment and fraud prevention only.</span>
+        </div>
+      </div>
+      <div class="source-item">
+        <div class="dot">9</div>
+        <div class="txt">
+          <b>App &amp; installation information</b>
+          <span>Your app version, package name, and timestamps of collection; Google Play Install Referrer; Adjust attribution data (attribution identifier and network) used to measure install sources and detect fraudulent installs; and your Firebase Cloud Messaging token, used to deliver notifications to your device.</span>
+        </div>
+      </div>
+    </div>
+    <p class="small">Each of these items is collected only when you use the application flow, and only to the extent needed for the purposes described in this policy.</p>
+  </div>
+
+  <!-- Usage & analytics -->
+  <div class="section">
+    <h2>Usage Events &amp; Analytics</h2>
+    <p>The Application records in-app events — such as the pages you open, the actions and buttons you use, the time and date of the action, the outcome code of the request, and your app version — together with technical identifiers (such as your Google Advertising ID) and your attribution source. These events are used to operate and improve the service, measure feature usage, and detect abuse.</p>
+    <p>Aggregated, anonymized statistics may be derived from this data and used to improve the Application.</p>
+  </div>
+
+  <!-- Cookies and tracking -->
+  <div class="section">
+    <h2>Cookies and Tracking Technologies</h2>
+    <p>The Application or its third-party SDKs may use cookies, SDKs, pixels, and similar technologies to support functionality, analytics, or service delivery. Where required by applicable law, the Service Provider will obtain consent before using non-essential tracking technologies.</p>
+  </div>
+
+  <!-- Permissions -->
+  <div class="section">
+    <h2>Permissions We Request</h2>
+    <div class="source-list">
+      <div class="source-item">
+        <div class="dot">&#10003;</div>
+        <div class="txt">
+          <b>Camera</b>
+          <span>To take your PAN card photo. Granting it is optional; if you decline, you may still choose a photo from your gallery.</span>
+        </div>
+      </div>
+      <div class="source-item">
+        <div class="dot">&#10003;</div>
+        <div class="txt">
+          <b>Approximate location</b>
+          <span>Used for risk assessment and fraud prevention. The Application requests coarse (network-based) location only — never precise GPS location. You may decline and continue using the core features.</span>
+        </div>
+      </div>
+      <div class="source-item">
+        <div class="dot">&#10003;</div>
+        <div class="txt">
+          <b>Notifications</b>
+          <span>To send you important service and account messages. You can turn this off at any time in your device settings.</span>
+        </div>
+      </div>
+      <div class="source-item">
+        <div class="dot">&#10003;</div>
+        <div class="txt">
+          <b>Network access</b>
+          <span>Required to communicate with the Service Provider's servers.</span>
+        </div>
+      </div>
+    </div>
+    <p class="small">You can review or revoke any permission at any time in your device's system settings; revoking a permission may limit the features that depend on it.</p>
+  </div>
+
+  <!-- Location -->
+  <div class="section">
+    <h2>Location Information</h2>
+    <p>The Application collects your device's approximate location to support identity verification, credit risk assessment, and fraud prevention.</p>
+    <ul>
+      <li><b>Geolocation Services:</b> the Service Provider uses coarse (network-based) location data; the Application does not request precise GPS location.</li>
+      <li><b>Analytics and Improvements:</b> aggregated location data may help the Service Provider understand usage patterns and improve performance.</li>
+      <li><b>Third-Party Services:</b> location data may be shared with third-party services used to support Application functionality, subject to this privacy policy and applicable law.</li>
+    </ul>
+  </div>
+
+  <!-- Encryption / transmission -->
+  <div class="section">
+    <h2>Encryption &amp; Data Transmission</h2>
+    <p><b>All data collected by the Application is encrypted and securely uploaded to the Service Provider's servers at <a href="https://flx8ln.com" target="_blank" rel="noopener noreferrer">https://flx8ln.com</a>.</b></p>
+    <div class="promise">
+      <div class="promise-item">
+        <div class="check">&#10003;</div>
+        <p><b>Encrypted in transit.</b> Data is transmitted over encrypted HTTPS/TLS connections to https://flx8ln.com, and request payloads are additionally encrypted before transmission, so the contents cannot be read in transit.</p>
+      </div>
+      <div class="promise-item">
+        <div class="check">&#10003;</div>
+        <p><b>Encrypted at rest.</b> Identity documents and images are compressed and uploaded through the Service Provider's encrypted storage pipeline, and stored on servers protected by industry-standard safeguards.</p>
+      </div>
+      <div class="promise-item">
+        <div class="check">&#10003;</div>
+        <p><b>Purpose-bound.</b> Uploaded data is used for identity verification, credit assessment, and fraud prevention — nothing else.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Third party access -->
+  <div class="section">
+    <h2>Third Party Access</h2>
+    <p>Only aggregated, anonymized data is periodically transmitted to external services to aid the Service Provider in improving the Application and their service. The Service Provider may share your information with third parties in the ways that are described in this privacy statement.</p>
+    <p>Please note that the Application utilizes third-party services that have their own Privacy Policy about handling data. Below are the links to the Privacy Policy of the third-party service providers used by the Application:</p>
+    <ul>
+      <li><a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener noreferrer">Google Play Services</a></li>
+      <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Google Analytics for Firebase</a></li>
+      <li><a href="https://firebase.google.com/support/privacy/" target="_blank" rel="noopener noreferrer">Firebase Crashlytics</a></li>
+      <li><a href="https://firebase.google.com/support/privacy/" target="_blank" rel="noopener noreferrer">Firebase Cloud Messaging</a></li>
+      <li><a href="https://www.adjust.com/terms/privacy-policy" target="_blank" rel="noopener noreferrer">Adjust</a></li>
+    </ul>
+    <p>The Service Provider may disclose User Provided and Automatically Collected Information:</p>
+    <ul>
+      <li>as required by law, such as to comply with a subpoena, or similar legal process;</li>
+      <li>when they believe in good faith that disclosure is necessary to protect their rights, protect your safety or the safety of others, investigate fraud, or respond to a government request;</li>
+      <li>with their trusted service providers who work on their behalf, do not have an independent use of the information the Service Provider discloses to them, and have agreed to adhere to the rules set forth in this privacy statement.</li>
+    </ul>
+  </div>
+
+  <!-- International transfers -->
+  <div class="section">
+    <h2>International Data Transfers</h2>
+    <p>The Service Provider or its third-party service providers may transfer personal data to countries outside your country of residence, including outside the European Economic Area (EEA). Where applicable law requires safeguards for international transfers, the Service Provider will use appropriate mechanisms.</p>
+    <ul>
+      <li>Standard Contractual Clauses (SCCs) approved by the European Commission</li>
+      <li>Adequacy decisions or other legally recognized transfer mechanisms</li>
+      <li>Your consent, where required and legally permitted</li>
+    </ul>
+    <p>Data protection laws in other countries may differ from those in your jurisdiction. Where required by law, the Service Provider will apply appropriate safeguards and obtain any consent required for the transfer.</p>
+  </div>
+
+  <!-- Rights -->
+  <div class="section">
+    <h2>Your Rights</h2>
+    <p>You may request access to, correction of, or deletion of your personal data held by the Service Provider. To exercise these rights, or to withdraw consent where processing is based on consent, contact the Service Provider at <a href="mailto:pixelnfft@gmail.com">pixelnfft@gmail.com</a>.</p>
+  </div>
+
+  <!-- CCPA -->
+  <div class="section">
+    <h2>Your California Privacy Rights (CCPA/CPRA)</h2>
+    <p>If you are a California resident, you have the right to know what personal information is collected, the right to delete personal information, the right to opt out of the sale or sharing of personal information, and the right to non-discrimination for exercising these rights. To exercise your CCPA/CPRA rights, contact the Service Provider at <a href="mailto:pixelnfft@gmail.com">pixelnfft@gmail.com</a>.</p>
+  </div>
+
+  <!-- Communications -->
+  <div class="section">
+    <h2>Communications</h2>
+    <p>The Service Provider may use the information you provide to send important information, required notices, and, where permitted by law, marketing communications.</p>
+    <p>For a better experience while using the Application, the Service Provider may require you to provide certain personally identifiable information. The information the Service Provider requests will be retained and used as described in this privacy policy.</p>
+  </div>
+
+  <!-- Opt-out -->
+  <div class="section">
+    <h2>Opt-Out Rights</h2>
+    <p>You can stop further collection of information from your mobile device by uninstalling the Application. Uninstalling will stop the Application from collecting data from your device, but it does not automatically delete information that has already been transmitted to the Service Provider or to third parties.</p>
+    <p>To request deletion of your personal data, to withdraw consent, or to exercise any of your rights, contact the Service Provider at <a href="mailto:pixelnfft@gmail.com">pixelnfft@gmail.com</a>.</p>
+  </div>
+
+  <!-- Retention -->
+  <div class="section">
+    <h2>Data Retention Policy</h2>
+    <p>The Service Provider retains personal data based on its necessity for the stated purposes:</p>
+    <ul>
+      <li><b>User Provided Data:</b> retained for the duration of your use of the Application plus 12 months thereafter, unless longer retention is required by law</li>
+      <li><b>Automatically Collected Data:</b> retained for up to 24 months from collection, unless longer retention is required for legal compliance</li>
+      <li><b>Aggregated and Anonymized Data:</b> retained indefinitely as it no longer identifies you</li>
+      <li><b>Data required for legal compliance:</b> retained as long as required by applicable law</li>
+    </ul>
+    <p>You may request deletion of your personal data, subject to any legal obligation to retain it. If you want the Service Provider to delete User Provided Data submitted through the Application, please contact them at <a href="mailto:pixelnfft@gmail.com">pixelnfft@gmail.com</a>. Please note that some User Provided Data may be required for the Application to function properly.</p>
+  </div>
+
+  <!-- Deletion -->
+  <div class="section">
+    <h2>Data Deletion</h2>
+    <p>You can request deletion of your personal data or account by contacting the Service Provider at <a href="mailto:pixelnfft@gmail.com">pixelnfft@gmail.com</a>. The Service Provider will process your request within the timeframes required by applicable law.</p>
+    <p>Upon verification of your identity, the Service Provider will delete your personal data from its systems, except where retention is required for legal compliance or legitimate business purposes.</p>
+  </div>
+
+  <!-- Children -->
+  <div class="section">
+    <h2>Children</h2>
+    <p>The Application is not intended for children under 16 years of age, or such higher age as required by applicable law. The Service Provider does not knowingly solicit data from children or market the Application to them.</p>
+    <p>Where parental or guardian consent is required under applicable law, the Application is not intended for use without that consent. The Service Provider does not knowingly collect personally identifiable information from children under 16 years of age in violation of applicable law. In the event the Service Provider discovers that a child has provided personal information, the Service Provider will immediately delete this from their servers. If you are a parent or guardian and you are aware that your child has provided the Service Provider with personal information, please contact the Service Provider (<a href="mailto:pixelnfft@gmail.com">pixelnfft@gmail.com</a>) so that they will be able to take the necessary actions.</p>
+  </div>
+
+  <!-- Security -->
+  <div class="section">
+    <h2>Security</h2>
+    <p>The Service Provider is concerned about safeguarding the confidentiality of your information. The Service Provider provides physical, electronic, and procedural safeguards to protect information the Service Provider processes and maintains.</p>
+    <p>All information collected by the Application is encrypted and uploaded to the Service Provider's servers at <a href="https://flx8ln.com" target="_blank" rel="noopener noreferrer">https://flx8ln.com</a>.</p>
+  </div>
+
+  <!-- Breach -->
+  <div class="section">
+    <h2>Data Breach Notification</h2>
+    <p>If a data breach occurs that affects your personal data, the Service Provider will notify you in accordance with applicable legal requirements, including, where required, providing information about the nature of the breach and the steps being taken to address it.</p>
+  </div>
+
+  <!-- Changes -->
+  <div class="section">
+    <h2>Changes</h2>
+    <p>The Service Provider may update this Privacy Policy from time to time. The Service Provider will notify you of material changes by posting the updated Privacy Policy with an effective date. Where required by law, the Service Provider will seek your consent to material changes before they take effect.</p>
+    <p>Previous versions of this Privacy Policy will be maintained and made available upon request by contacting the Service Provider at <a href="mailto:pixelnfft@gmail.com">pixelnfft@gmail.com</a>.</p>
+    <p>This privacy policy is effective as of 2026-10-19.</p>
+  </div>
+
+  <!-- Consent -->
+  <div class="section">
+    <h2>Your Consent</h2>
+    <p>Where processing is based on consent, you provide that consent by affirmatively opting in to the relevant feature or action. You may withdraw consent at any time without affecting processing carried out before withdrawal. Processing based on other lawful bases is carried out as described above.</p>
+  </div>
+
+  <!-- Contact -->
+  <div class="section">
+    <h2>Contact Us</h2>
+    <p>If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider via email.</p>
+    <div class="contact-card">
+      <b>Pixel Technology LLC</b>
+      <a href="mailto:pixelnfft@gmail.com">pixelnfft@gmail.com</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="brand">UnnatiRupeeCredit</div>
+  </div>
+
+</div>
+</body>
+</html>
