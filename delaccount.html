@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Delete Your Account - UnnatiRupeeCredit</title>
+<style>
+  :root {
+    --primary: #9E2BCF;
+    --primary-dark: #7A1FA2;
+    --primary-light: #F7ECFC;
+    --text-dark: #1D1D1D;
+    --text-gray: #666666;
+    --text-light: #999999;
+    --bg: #FFFFFF;
+    --warn-bg: #FFF6E8;
+    --warn-border: #F0A64B;
+    --warn-text: #8A5A12;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    background: var(--bg);
+    color: var(--text-dark);
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 480px; margin: 0 auto; padding-bottom: 28px; }
+
+  /* Hero */
+  .hero {
+    background: linear-gradient(180deg, #7A1FA2 0%, #B565D4 100%);
+    padding: 36px 24px 32px;
+    color: #FFFFFF;
+  }
+  .hero .brand { font-size: 13px; font-weight: 600; opacity: 0.85; margin-bottom: 14px; letter-spacing: 1px; text-transform: uppercase; }
+  .hero h1 { font-size: 24px; font-weight: 700; letter-spacing: 0.2px; }
+  .hero p { margin-top: 10px; font-size: 14px; line-height: 1.6; opacity: 0.92; }
+  .hero .amount {
+    margin-top: 18px;
+    display: inline-block;
+    background: rgba(255,255,255,0.16);
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 999px;
+    padding: 8px 18px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  /* Section card */
+  .section {
+    background: #F7ECFC;
+    border-radius: 16px;
+    margin: 14px 16px 0;
+    padding: 20px 18px;
+  }
+  .section h2 {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section h2::before {
+    content: "";
+    width: 4px; height: 16px;
+    border-radius: 2px;
+    background: var(--primary);
+    display: inline-block;
+    flex: 0 0 auto;
+  }
+  .section p { margin-top: 10px; font-size: 14px; line-height: 1.7; color: var(--text-gray); }
+  .section p.small { font-size: 12.5px; line-height: 1.6; color: var(--text-light); }
+  .section a { color: var(--primary); text-decoration: none; word-break: break-all; }
+  .section ul { margin: 10px 0 0 18px; }
+  .section ul li { font-size: 13.5px; line-height: 1.7; color: var(--text-gray); margin-top: 4px; }
+  .section b, .section strong { color: var(--text-dark); }
+
+  /* Step / data list */
+  .source-list { margin-top: 14px; display: flex; flex-direction: column; gap: 10px; }
+  .source-item {
+    display: flex; align-items: flex-start; gap: 10px;
+    background: var(--primary-light);
+    border-radius: 12px;
+    padding: 12px 14px;
+  }
+  .source-item .dot {
+    flex: 0 0 auto;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #FFF;
+    font-size: 12px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    margin-top: 1px;
+  }
+  .source-item .txt { min-width: 0; }
+  .source-item .txt b { display: block; font-size: 14px; color: var(--text-dark); }
+  .source-item .txt span { font-size: 12.5px; color: var(--text-gray); line-height: 1.55; display: block; margin-top: 3px; }
+
+  /* Warning card */
+  .warn {
+    margin: 14px 16px 0;
+    background: var(--warn-bg);
+    border: 1px solid var(--warn-border);
+    border-radius: 16px;
+    padding: 18px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .warn .icon {
+    flex: 0 0 auto;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: var(--warn-border);
+    color: #FFF;
+    font-size: 13px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    margin-top: 1px;
+  }
+  .warn h2 { font-size: 15px; font-weight: 700; color: var(--warn-text); }
+  .warn p { margin-top: 8px; font-size: 13.5px; line-height: 1.65; color: var(--warn-text); }
+  .warn p + p { margin-top: 8px; }
+  .warn b { color: #6E4609; }
+  .warn a { color: #6E4609; font-weight: 700; text-decoration: none; word-break: break-all; }
+
+  /* Promise / note list */
+  .promise { margin-top: 12px; display: flex; flex-direction: column; gap: 10px; }
+  .promise-item { display: flex; gap: 10px; align-items: flex-start; }
+  .promise-item .check {
+    flex: 0 0 auto;
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #FFF;
+    font-size: 11px;
+    display: flex; align-items: center; justify-content: center;
+    margin-top: 2px;
+  }
+  .promise-item p { font-size: 13.5px; line-height: 1.65; color: var(--text-gray); margin-top: 0; }
+  .promise-item p b { color: var(--text-dark); }
+
+  /* Contact block */
+  .contact-card {
+    margin-top: 14px;
+    background: var(--primary-light);
+    border-radius: 12px;
+    padding: 14px;
+    text-align: center;
+  }
+  .contact-card b { display: block; font-size: 14px; color: var(--text-dark); }
+  .contact-card a { display: block; margin-top: 6px; font-size: 14px; font-weight: 700; }
+
+  /* Footer */
+  .footer {
+    margin: 22px 16px 0;
+    padding: 18px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--text-light);
+  }
+  .footer .brand { font-weight: 700; color: var(--text-gray); font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="brand">UnnatiRupeeCredit</div>
+    <h1>How to Delete Your Account</h1>
+    <p>This guide explains how to delete your UnnatiRupeeCredit account and the personal data associated with it, directly inside the Application.</p>
+    <div class="amount">Last updated: 2026-10-19</div>
+  </div>
+
+  <!-- Overview -->
+  <div class="section">
+    <h2>Overview</h2>
+    <p>You can delete your account and clear your data at any time from within the Application. The option is available while you are signed in, and it is located in the <b>Settings</b> screen of the third tab at the bottom of the home screen.</p>
+    <p>The deletion takes effect immediately in the Application: your account is closed, your data is cleared from your device, and you are returned to the login screen.</p>
+  </div>
+
+  <!-- Steps -->
+  <div class="section">
+    <h2>Steps to Delete Your Account</h2>
+    <div class="source-list">
+      <div class="source-item">
+        <div class="dot">1</div>
+        <div class="txt">
+          <b>Sign in to the Application</b>
+          <span>Open the Application and sign in with your mobile number and verification code. Account deletion is only available while you are logged in.</span>
+        </div>
+      </div>
+      <div class="source-item">
+        <div class="dot">2</div>
+        <div class="txt">
+          <b>Open the third tab</b>
+          <span>On the home screen, tap the <b>third tab</b> at the bottom of the screen — the rightmost tab, labelled <b>Mine</b>.</span>
+        </div>
+      </div>
+      <div class="source-item">
+        <div class="dot">3</div>
+        <div class="txt">
+          <b>Tap "Settings"</b>
+          <span>In the menu on the Mine page, tap <b>Settings</b>.</span>
+        </div>
+      </div>
+      <div class="source-item">
+        <div class="dot">4</div>
+        <div class="txt">
+          <b>Tap "Delete Account"</b>
+          <span>On the Settings screen, tap <b>Delete Account</b>.</span>
+        </div>
+      </div>
+      <div class="source-item">
+        <div class="dot">5</div>
+        <div class="txt">
+          <b>Confirm the deletion</b>
+          <span>A confirmation dialog appears asking whether you want to delete your account and clear all of your account data. Tap <b>Yes</b> to confirm. If you change your mind, tap <b>No</b>.</span>
+        </div>
+      </div>
+      <div class="source-item">
+        <div class="dot">6</div>
+        <div class="txt">
+          <b>Done</b>
+          <span>Your account data is cleared, the message <b>"All your account data has been cleared"</b> is shown, and you are returned to the login screen. Any remaining step is simply to uninstall the Application if you no longer wish to use it.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Warning -->
+  <div class="warn">
+    <div class="icon">!</div>
+    <div>
+      <h2>Important: Outstanding Loan Orders</h2>
+      <p>If you have a loan order that has <b>not been fully repaid</b>, account deletion <b>may fail</b> on the server side. An active or unsettled order is tied to your account record, and the account cannot be fully closed while that record still needs to be retained.</p>
+      <p>If the deletion does not go through, please <b>settle the outstanding amount first</b>, then repeat the steps above. If it still fails after your loan is fully repaid, contact us at <a href="mailto:pixelnfft@gmail.com">pixelnfft@gmail.com</a> and we will help you complete the deletion.</p>
+    </div>
+  </div>
+
+  <!-- What gets deleted -->
+  <div class="section">
+    <h2>What Is Deleted</h2>
+    <p>Deleting your account clears the personal data associated with it:</p>
+    <ul>
+      <li>Your account and login session</li>
+      <li>The basic profile and identity information you submitted</li>
+      <li>The reference contacts you provided</li>
+      <li>The device and technical information collected during your application</li>
+      <li>The data stored locally on your device by the Application</li>
+    </ul>
+    <p class="small">Some records may be retained where the law requires it, or for the periods described in our Privacy Policy — for example, records needed to comply with financial and anti-money-laundering obligations.</p>
+  </div>
+
+  <!-- Alternative channel -->
+  <div class="section">
+    <h2>Cannot Sign In?</h2>
+    <p>If you can no longer access your account — for example you changed your mobile number or cannot receive the verification code — you can request deletion by email. Send your request from the mobile number or email associated with your account, and the Service Provider will process it after verifying your identity.</p>
+    <div class="contact-card">
+      <b>Pixel Technology LLC</b>
+      <a href="mailto:pixelnfft@gmail.com">pixelnfft@gmail.com</a>
+    </div>
+    <p class="small">Requests are processed within the timeframes required by applicable law. See our Privacy Policy for more details on your rights and on data retention.</p>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="brand">UnnatiRupeeCredit</div>
+  </div>
+
+</div>
+</body>
+</html>
